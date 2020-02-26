@@ -1,7 +1,6 @@
 import numpy as np
 #to minimise f=x**2+y**2+z**2
 a=np.random.randn(3,1)
-a=np.float64(a)
 print("inital value of x,y,z are ")
 print(a)
 #a is all variables
@@ -20,7 +19,6 @@ c=(0.9)
 b=(k+0.00001)**1/2
 b=np.float64(b)
 da=np.dot((c/b).T,df)
-da=np.float64(da)
 sumdelx2=0.9*sumdelx2 + 0.1*np.square(da)
 a=a-da
 for i in range (0,1):
@@ -33,6 +31,5 @@ for i in range (0,1):
     da=np.dot((c/b).T,df)
     a=a-da
     sumdelx2=0.9*sumdelx2 + 0.1*np.square(da)
-a = a.astype('float64')
 print("optimised value of x,y,z are ")
 print(a)
