@@ -19,7 +19,6 @@ q=np.random.normal()
 df=np.array([[2*n],[2*m],[2*q]])
 df2=np.array([[4*n**2],[4*m**2],[4*q**2]])
 k=0.9*k+0.1*df2
-l=0.9*l+0.1*df
 c=(0.9)
 b=(k+0.00001)**1/2
 da=np.dot((c/b).T,df)
@@ -32,7 +31,6 @@ for i in range (0,999):
     df=np.array([[2*n],[2*m],[2*q]])
     df2=np.array([[4*n**2],[4*m**2],[4*q**2]])
     k=0.9*k+0.1*df2
-    l=0.9*l+0.1*df
     c=(sumdelx2+0.00001)**1/2
     b=(k+0.00001)**1/2
     da=np.dot((c/b).T,df)
