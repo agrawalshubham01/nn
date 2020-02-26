@@ -1,6 +1,8 @@
 import numpy as np
 #to minimise f=x**2+y**2+z**2
 a=np.random.rand(3,1)
+print("inital value of x,y,z are ")
+print(a)
 #a is all variables
 n=0
 m=0
@@ -37,4 +39,5 @@ for i in range (0,999):
     da=np.dot((c/b).T,df)
     a=a-da
     sumdelx2=0.9*sumdelx2 + 0.1*da
+print("optimised value of x,y,z are ")
 print(a)
