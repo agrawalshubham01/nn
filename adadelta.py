@@ -23,7 +23,7 @@ l=0.9*l+0.1*df
 c=(0.9)
 b=(k+0.00001)**1/2
 da=np.dot((c/b).T,df)
-sumdelx2=0.9*sumdelx2 + 0.1*da
+sumdelx2=0.9*sumdelx2 + 0.1*da**2
 a=a-da
 for i in range (0,999):
     n=np.random.normal()
@@ -37,6 +37,6 @@ for i in range (0,999):
     b=(k+0.00001)**1/2
     da=np.dot((c/b).T,df)
     a=a-da
-    sumdelx2=0.9*sumdelx2 + 0.1*da
+    sumdelx2=0.9*sumdelx2 + 0.1*da**2
 print("optimised value of x,y,z are ")
 print(a)
