@@ -3,10 +3,10 @@ import numpy as np
 x=np.random.randn(3,1)
 print("inital value of x,y,z are ")
 print(x)
-for i in range (0,100):
+for i in range (0,10000):
     a=np.random.randn(3,1)
     df=2*a
-    delx=0.9*df
+    delx=0.001*df
     x=x-delx
 print("optimised value of x,y,z are ")
 print(x)
